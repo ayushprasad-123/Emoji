@@ -15,7 +15,7 @@ function take_pic(){
 classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/lUgz-9cun/model.json", modelLoaded);
 function modelLoaded(){}
 function gotResults(error, results){
-    if(!error){
+    if(error!=false){
         p1=results[0].label;
         p2=results[2].label;
         var synth=window.speechSynthesis;
